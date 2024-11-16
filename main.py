@@ -6,10 +6,24 @@ from backtesting.backtest import backtest_strategy
 import numpy as np
 import pandas as pd
 
+# Define asset sectors
+sectors = {
+    'AAPL': 'Technology',
+    'MSFT': 'Technology',
+    'GOOGL': 'Technology',
+    'AMZN': 'Technology',
+    'META': 'Technology',
+    'JPM': 'Finance',           # JPMorgan Chase & Co.
+    'XOM': 'Energy',            # Exxon Mobil Corporation
+    'JNJ': 'Healthcare',        # Johnson & Johnson
+    'VZ': 'Telecommunications', # Verizon Communications
+    'PG': 'Consumer Staples'    # Procter & Gamble
+}
+
 def main():
     # Step 1: Data Collection
-    ASSETS = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META']  # Define asset tickers
-    start_date = '2019-11-15'
+    ASSETS = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'JPM', 'XOM', 'JNJ', 'VZ', 'PG']  # Define asset tickers
+    start_date = '2015-01-01'
     end_date = '2024-11-15'
     price_data = fetch_historical_data(ASSETS, start_date, end_date)
     
@@ -39,26 +53,38 @@ def main():
         y = returns[asset].values  # Target variable for the asset
         model.train(X, y, asset)
         predictions = model.predict(X, asset)
-        # Use the average of predictions as expected return
-        expected_returns_dict[asset] = np.mean(predictions)
+        
+        # Reassess Expected Returns Calculation
+        # Annualize expected returns assuming daily predictions
+        daily_return = np.mean(predictions)
+        annual_return = daily_return * 252  # 252 trading days
+        expected_returns_dict[asset] = annual_return
     
     # Aggregate expected returns into a NumPy array
     expected_returns = np.array([expected_returns_dict[asset] for asset in ASSETS])
     
-    print(f"Expected Returns: {expected_returns}\n")
+    print(f"Expected Returns (Annualized): {expected_returns}\n")
     
     # Step 4: Optimization
     asset_returns = returns[ASSETS]  # Extract asset returns
     cov_matrix = asset_returns.cov().values  # Shape: (5, 5)
     
-    lambda_param = 1.0  # Risk aversion parameter
-    max_weight = 0.3     # Maximum 30% in any single asset
+    lambda_param = 0.7  # Adjusted Risk Aversion Parameter
+    max_weight = 0.2    # Maximum 20% in any single asset
+    min_weight = 0.05   # Minimum 5% in any single asset
+    
+    # Get sector constraints and asset sectors list
+    sector_constraints, asset_sectors_list = map_sectors_to_constraints(ASSETS, sectors)
     
     try:
         weights = maximize_utility_optimization(
-            expected_returns, cov_matrix, 
+            expected_returns=expected_returns, 
+            cov_matrix=cov_matrix, 
             lambda_param=lambda_param, 
-            max_weight=max_weight
+            max_weight=max_weight,
+            min_weight=min_weight,
+            sector_constraints=sector_constraints,
+            asset_sectors=asset_sectors_list
         )
         print(f"Optimized Weights: {weights}\n")
     except ValueError as e:
@@ -72,6 +98,34 @@ def main():
     
     # Step 6: Enhanced Performance Metrics
     calculate_performance_metrics(portfolio_value)
+
+def map_sectors_to_constraints(assets, sectors_dict):
+    """
+    Maps asset sectors to their cumulative weight constraints.
+    
+    Args:
+        assets (list): List of asset tickers.
+        sectors_dict (dict): Dictionary mapping asset tickers to sectors.
+        
+    Returns:
+        tuple: (sector_constraints, asset_sectors_list)
+            - sector_constraints: Dictionary mapping sectors to their max cumulative weight.
+            - asset_sectors_list: List of sectors in the same order as assets.
+    """
+    # Define sector constraints
+    sector_constraints = {
+        'Technology': 0.6,      # Max 60% in Technology sector
+        'Finance': 0.3,         # Max 30% in Finance sector
+        'Energy': 0.1,          # Max 10% in Energy sector
+        'Healthcare': 0.2,      # Max 20% in Healthcare sector
+        'Telecommunications': 0.2, # Max 20% in Telecommunications sector
+        'Consumer Staples': 0.2  # Max 20% in Consumer Staples sector
+    }
+    
+    # Create list of sectors in same order as assets
+    asset_sectors_list = [sectors_dict.get(asset, 'Other') for asset in assets]
+    
+    return sector_constraints, asset_sectors_list
 
 def calculate_performance_metrics(portfolio_value):
     """
