@@ -1,0 +1,30 @@
+# config/config.yaml
+
+data:
+  start_date: '2015-01-01'
+  end_date: '2024-12-31'
+
+model_config:
+  model_params:
+    n_estimators: [100, 200]
+    min_samples_split: [10, 5]
+    min_samples_leaf: [4, 2]
+    max_features: ['sqrt']
+    max_depth: [30, 20]
+
+optimization:
+  lambda_param: 0.7
+  max_weight: 0.2
+  min_weight: 0.05
+
+sector_constraints:
+  Technology: 0.40
+  Finance: 0.20
+  Energy: 0.15
+  Healthcare: 0.10
+  Telecommunications: 0.10
+  Consumer Staples: 0.05
+
+backtesting:
+  rebalance_frequency: 'BM'  # Business Month End
+  transaction_cost: 0.001    # 0.1%

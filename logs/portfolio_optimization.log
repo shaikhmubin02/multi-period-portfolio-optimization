@@ -1,0 +1,895 @@
+2024-11-18 23:33:13,102 - INFO - Starting portfolio optimization process.
+2024-11-18 23:33:13,102 - INFO - Fetching historical data.
+2024-11-18 23:33:15,228 - INFO - Historical data fetched successfully.
+2024-11-18 23:33:15,228 - INFO - Preprocessing data.
+2024-11-18 23:33:15,309 - INFO - Data preprocessing completed.
+2024-11-18 23:33:15,309 - INFO - Training predictive models.
+2024-11-18 23:33:15,309 - INFO - Training model for AAPL.
+2024-11-18 23:33:57,707 - INFO - Asset: AAPL
+2024-11-18 23:33:57,707 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-18 23:33:57,707 - INFO - Average MAE: 0.007399
+2024-11-18 23:33:57,719 - INFO - Average RMSE: 0.011075
+2024-11-18 23:33:57,719 - INFO - Average R^2 Score: 0.621240
+
+2024-11-18 23:33:57,721 - INFO - Training model for MSFT.
+2024-11-18 23:34:40,024 - INFO - Asset: MSFT
+2024-11-18 23:34:40,024 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-18 23:34:40,024 - INFO - Average MAE: 0.006934
+2024-11-18 23:34:40,024 - INFO - Average RMSE: 0.010650
+2024-11-18 23:34:40,024 - INFO - Average R^2 Score: 0.614905
+
+2024-11-18 23:34:40,036 - INFO - Training model for GOOGL.
+2024-11-18 23:35:26,221 - INFO - Asset: GOOGL
+2024-11-18 23:35:26,221 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-18 23:35:26,221 - INFO - Average MAE: 0.007171
+2024-11-18 23:35:26,221 - INFO - Average RMSE: 0.010795
+2024-11-18 23:35:26,221 - INFO - Average R^2 Score: 0.636088
+
+2024-11-18 23:35:26,221 - INFO - Training model for AMZN.
+2024-11-18 23:36:13,601 - INFO - Asset: AMZN
+2024-11-18 23:36:13,601 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-18 23:36:13,601 - INFO - Average MAE: 0.007945
+2024-11-18 23:36:13,601 - INFO - Average RMSE: 0.012246
+2024-11-18 23:36:13,601 - INFO - Average R^2 Score: 0.650046
+
+2024-11-18 23:36:13,601 - INFO - Training model for META.
+2024-11-18 23:36:59,961 - INFO - Asset: META
+2024-11-18 23:36:59,961 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-18 23:36:59,961 - INFO - Average MAE: 0.009176
+2024-11-18 23:36:59,961 - INFO - Average RMSE: 0.014981
+2024-11-18 23:36:59,961 - INFO - Average R^2 Score: 0.601054
+
+2024-11-18 23:36:59,982 - INFO - Training model for JPM.
+2024-11-18 23:37:42,651 - INFO - Asset: JPM
+2024-11-18 23:37:42,651 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-18 23:37:42,651 - INFO - Average MAE: 0.006480
+2024-11-18 23:37:42,651 - INFO - Average RMSE: 0.010608
+2024-11-18 23:37:42,651 - INFO - Average R^2 Score: 0.623015
+
+2024-11-18 23:37:42,651 - INFO - Training model for XOM.
+2024-11-18 23:38:25,138 - INFO - Asset: XOM
+2024-11-18 23:38:25,145 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-18 23:38:25,151 - INFO - Average MAE: 0.007083
+2024-11-18 23:38:25,151 - INFO - Average RMSE: 0.010881
+2024-11-18 23:38:25,153 - INFO - Average R^2 Score: 0.616842
+
+2024-11-18 23:38:25,154 - INFO - Training model for JNJ.
+2024-11-18 23:39:04,729 - INFO - Asset: JNJ
+2024-11-18 23:39:04,729 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-18 23:39:04,729 - INFO - Average MAE: 0.004600
+2024-11-18 23:39:04,729 - INFO - Average RMSE: 0.007113
+2024-11-18 23:39:04,729 - INFO - Average R^2 Score: 0.609587
+
+2024-11-18 23:39:04,729 - INFO - Training model for VZ.
+2024-11-18 23:39:41,459 - INFO - Asset: VZ
+2024-11-18 23:39:41,459 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-18 23:39:41,459 - INFO - Average MAE: 0.005069
+2024-11-18 23:39:41,459 - INFO - Average RMSE: 0.007594
+2024-11-18 23:39:41,459 - INFO - Average R^2 Score: 0.613780
+
+2024-11-18 23:39:41,459 - INFO - Training model for PG.
+2024-11-18 23:40:36,033 - INFO - Asset: PG
+2024-11-18 23:40:36,034 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-18 23:40:36,035 - INFO - Average MAE: 0.004586
+2024-11-18 23:40:36,035 - INFO - Average RMSE: 0.007250
+2024-11-18 23:40:36,035 - INFO - Average R^2 Score: 0.614647
+
+2024-11-18 23:40:36,035 - INFO - Predictive modeling completed.
+2024-11-18 23:40:36,036 - INFO - Starting portfolio optimization.
+2024-11-18 23:40:36,048 - INFO - Optimized Weights: [0.11768868 0.11895087 0.10516668 0.13797822 0.12021556 0.09985972
+ 0.07408682 0.07488611 0.0713145  0.07985285]
+
+2024-11-18 23:40:36,048 - INFO - Starting backtesting.
+2024-11-18 23:40:36,049 - INFO - Converted returns index to timezone-naive.
+2024-11-18 23:52:25,904 - INFO - Starting portfolio optimization process.
+2024-11-18 23:52:25,904 - INFO - Fetching historical data.
+2024-11-18 23:52:28,221 - INFO - Historical data fetched successfully.
+2024-11-18 23:52:28,221 - INFO - Preprocessing data.
+2024-11-18 23:52:28,292 - INFO - Data preprocessing completed.
+2024-11-18 23:52:28,292 - INFO - Training predictive models.
+2024-11-18 23:52:28,292 - INFO - Training model for AAPL.
+2024-11-18 23:53:12,301 - INFO - Asset: AAPL
+2024-11-18 23:53:12,301 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-18 23:53:12,301 - INFO - Average MAE: 0.007397
+2024-11-18 23:53:12,301 - INFO - Average RMSE: 0.011083
+2024-11-18 23:53:12,301 - INFO - Average R^2 Score: 0.620691
+
+2024-11-18 23:53:12,301 - INFO - Training model for MSFT.
+2024-11-18 23:53:59,354 - INFO - Asset: MSFT
+2024-11-18 23:53:59,354 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-18 23:53:59,354 - INFO - Average MAE: 0.006942
+2024-11-18 23:53:59,354 - INFO - Average RMSE: 0.010665
+2024-11-18 23:53:59,354 - INFO - Average R^2 Score: 0.613835
+
+2024-11-18 23:53:59,354 - INFO - Training model for GOOGL.
+2024-11-18 23:54:40,634 - INFO - Asset: GOOGL
+2024-11-18 23:54:40,646 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-18 23:54:40,646 - INFO - Average MAE: 0.007174
+2024-11-18 23:54:40,646 - INFO - Average RMSE: 0.010796
+2024-11-18 23:54:40,646 - INFO - Average R^2 Score: 0.636032
+
+2024-11-18 23:54:40,646 - INFO - Training model for AMZN.
+2024-11-18 23:55:20,134 - INFO - Asset: AMZN
+2024-11-18 23:55:20,134 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-18 23:55:20,134 - INFO - Average MAE: 0.007945
+2024-11-18 23:55:20,134 - INFO - Average RMSE: 0.012248
+2024-11-18 23:55:20,134 - INFO - Average R^2 Score: 0.649961
+
+2024-11-18 23:55:20,134 - INFO - Training model for META.
+2024-11-18 23:55:59,405 - INFO - Asset: META
+2024-11-18 23:55:59,405 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-18 23:55:59,406 - INFO - Average MAE: 0.009166
+2024-11-18 23:55:59,406 - INFO - Average RMSE: 0.014965
+2024-11-18 23:55:59,406 - INFO - Average R^2 Score: 0.601915
+
+2024-11-18 23:55:59,406 - INFO - Training model for JPM.
+2024-11-18 23:56:41,190 - INFO - Asset: JPM
+2024-11-18 23:56:41,190 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-18 23:56:41,190 - INFO - Average MAE: 0.006479
+2024-11-18 23:56:41,192 - INFO - Average RMSE: 0.010607
+2024-11-18 23:56:41,192 - INFO - Average R^2 Score: 0.623078
+
+2024-11-18 23:56:41,192 - INFO - Training model for XOM.
+2024-11-18 23:57:23,976 - INFO - Asset: XOM
+2024-11-18 23:57:23,976 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-18 23:57:23,976 - INFO - Average MAE: 0.007088
+2024-11-18 23:57:23,976 - INFO - Average RMSE: 0.010891
+2024-11-18 23:57:23,976 - INFO - Average R^2 Score: 0.616189
+
+2024-11-18 23:57:23,976 - INFO - Training model for JNJ.
+2024-11-18 23:58:06,106 - INFO - Asset: JNJ
+2024-11-18 23:58:06,106 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-18 23:58:06,106 - INFO - Average MAE: 0.004590
+2024-11-18 23:58:06,106 - INFO - Average RMSE: 0.007100
+2024-11-18 23:58:06,106 - INFO - Average R^2 Score: 0.610964
+
+2024-11-18 23:58:06,106 - INFO - Training model for VZ.
+2024-11-18 23:58:42,542 - INFO - Asset: VZ
+2024-11-18 23:58:42,542 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-18 23:58:42,542 - INFO - Average MAE: 0.005065
+2024-11-18 23:58:42,542 - INFO - Average RMSE: 0.007586
+2024-11-18 23:58:42,542 - INFO - Average R^2 Score: 0.614649
+
+2024-11-18 23:58:42,542 - INFO - Training model for PG.
+2024-11-18 23:59:22,861 - INFO - Asset: PG
+2024-11-18 23:59:22,861 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-18 23:59:22,861 - INFO - Average MAE: 0.004586
+2024-11-18 23:59:22,861 - INFO - Average RMSE: 0.007254
+2024-11-18 23:59:22,861 - INFO - Average R^2 Score: 0.614190
+
+2024-11-18 23:59:22,861 - INFO - Predictive modeling completed.
+2024-11-18 23:59:22,861 - INFO - Starting portfolio optimization.
+2024-11-18 23:59:22,883 - INFO - Optimized Weights: [0.11727213 0.11910642 0.10540245 0.13801913 0.12019988 0.09987169
+ 0.07362593 0.07527642 0.07132614 0.07989981]
+
+2024-11-18 23:59:22,883 - INFO - Starting backtesting.
+2024-11-18 23:59:22,884 - INFO - Converted returns index to timezone-naive.
+2024-11-18 23:59:22,890 - ERROR - Missing data for date 2015-01-22: DatetimeIndex.get_loc() got an unexpected keyword argument 'method'
+2024-11-18 23:59:22,891 - ERROR - Missing data for date 2015-01-23: DatetimeIndex.get_loc() got an unexpected keyword argument 'method'
+2024-11-19 00:05:44,348 - INFO - Starting portfolio optimization process.
+2024-11-19 00:05:44,348 - INFO - Fetching historical data.
+2024-11-19 00:05:46,277 - INFO - Historical data fetched successfully.
+2024-11-19 00:05:46,277 - INFO - Preprocessing data.
+2024-11-19 00:05:46,340 - INFO - Data preprocessing completed.
+2024-11-19 00:05:46,340 - INFO - Training predictive models.
+2024-11-19 00:05:46,341 - INFO - Training model for AAPL.
+2024-11-19 00:06:26,127 - INFO - Asset: AAPL
+2024-11-19 00:06:26,127 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:06:26,127 - INFO - Average MAE: 0.007397
+2024-11-19 00:06:26,127 - INFO - Average RMSE: 0.011075
+2024-11-19 00:06:26,127 - INFO - Average R^2 Score: 0.621239
+
+2024-11-19 00:06:26,127 - INFO - Training model for MSFT.
+2024-11-19 00:07:05,422 - INFO - Asset: MSFT
+2024-11-19 00:07:05,422 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-19 00:07:05,422 - INFO - Average MAE: 0.006936
+2024-11-19 00:07:05,422 - INFO - Average RMSE: 0.010655
+2024-11-19 00:07:05,422 - INFO - Average R^2 Score: 0.614541
+
+2024-11-19 00:07:05,437 - INFO - Training model for GOOGL.
+2024-11-19 00:07:43,285 - INFO - Asset: GOOGL
+2024-11-19 00:07:43,285 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:07:43,285 - INFO - Average MAE: 0.007165
+2024-11-19 00:07:43,285 - INFO - Average RMSE: 0.010784
+2024-11-19 00:07:43,285 - INFO - Average R^2 Score: 0.636848
+
+2024-11-19 00:07:43,285 - INFO - Training model for AMZN.
+2024-11-19 00:08:23,639 - INFO - Asset: AMZN
+2024-11-19 00:08:23,639 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:08:23,639 - INFO - Average MAE: 0.007948
+2024-11-19 00:08:23,639 - INFO - Average RMSE: 0.012247
+2024-11-19 00:08:23,639 - INFO - Average R^2 Score: 0.649975
+
+2024-11-19 00:08:23,639 - INFO - Training model for META.
+2024-11-19 00:09:02,761 - INFO - Asset: META
+2024-11-19 00:09:02,761 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:09:02,780 - INFO - Average MAE: 0.009168
+2024-11-19 00:09:02,781 - INFO - Average RMSE: 0.014973
+2024-11-19 00:09:02,781 - INFO - Average R^2 Score: 0.601482
+
+2024-11-19 00:09:02,782 - INFO - Training model for JPM.
+2024-11-19 00:09:57,090 - INFO - Asset: JPM
+2024-11-19 00:09:57,090 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:09:57,090 - INFO - Average MAE: 0.006482
+2024-11-19 00:09:57,090 - INFO - Average RMSE: 0.010622
+2024-11-19 00:09:57,090 - INFO - Average R^2 Score: 0.622040
+
+2024-11-19 00:09:57,090 - INFO - Training model for XOM.
+2024-11-19 00:10:43,577 - INFO - Asset: XOM
+2024-11-19 00:10:43,577 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:10:43,577 - INFO - Average MAE: 0.007081
+2024-11-19 00:10:43,577 - INFO - Average RMSE: 0.010886
+2024-11-19 00:10:43,584 - INFO - Average R^2 Score: 0.616540
+
+2024-11-19 00:10:43,584 - INFO - Training model for JNJ.
+2024-11-19 00:11:28,095 - INFO - Asset: JNJ
+2024-11-19 00:11:28,095 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:11:28,095 - INFO - Average MAE: 0.004597
+2024-11-19 00:11:28,096 - INFO - Average RMSE: 0.007111
+2024-11-19 00:11:28,096 - INFO - Average R^2 Score: 0.609795
+
+2024-11-19 00:11:28,096 - INFO - Training model for VZ.
+2024-11-19 00:12:10,902 - INFO - Asset: VZ
+2024-11-19 00:12:10,902 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-19 00:12:10,902 - INFO - Average MAE: 0.005074
+2024-11-19 00:12:10,902 - INFO - Average RMSE: 0.007593
+2024-11-19 00:12:10,920 - INFO - Average R^2 Score: 0.613951
+
+2024-11-19 00:12:10,921 - INFO - Training model for PG.
+2024-11-19 00:12:57,160 - INFO - Asset: PG
+2024-11-19 00:12:57,160 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 100}
+2024-11-19 00:12:57,160 - INFO - Average MAE: 0.004392
+2024-11-19 00:12:57,160 - INFO - Average RMSE: 0.006980
+2024-11-19 00:12:57,160 - INFO - Average R^2 Score: 0.642844
+
+2024-11-19 00:12:57,160 - INFO - Predictive modeling completed.
+2024-11-19 00:12:57,160 - INFO - Starting portfolio optimization.
+2024-11-19 00:12:57,160 - INFO - Optimized Weights: [0.11735763 0.11891698 0.10516031 0.13854116 0.12002392 0.09992101
+ 0.07354829 0.07454415 0.07051328 0.08147327]
+
+2024-11-19 00:12:57,160 - INFO - Starting backtesting.
+2024-11-19 00:12:57,173 - INFO - Converted returns index to timezone-naive.
+2024-11-19 00:12:57,185 - INFO - Rebalancing portfolio on 2015-01-30
+2024-11-19 00:12:57,186 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,199 - INFO - Rebalancing portfolio on 2015-02-27
+2024-11-19 00:12:57,200 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,203 - INFO - Rebalancing portfolio on 2015-03-31
+2024-11-19 00:12:57,203 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,214 - INFO - Rebalancing portfolio on 2015-04-30
+2024-11-19 00:12:57,214 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,219 - INFO - Rebalancing portfolio on 2015-05-29
+2024-11-19 00:12:57,220 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,224 - INFO - Rebalancing portfolio on 2015-06-30
+2024-11-19 00:12:57,225 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,231 - INFO - Rebalancing portfolio on 2015-07-31
+2024-11-19 00:12:57,232 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,238 - INFO - Rebalancing portfolio on 2015-08-31
+2024-11-19 00:12:57,239 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,244 - INFO - Rebalancing portfolio on 2015-09-30
+2024-11-19 00:12:57,245 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,250 - INFO - Rebalancing portfolio on 2015-10-30
+2024-11-19 00:12:57,250 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,254 - INFO - Rebalancing portfolio on 2015-11-30
+2024-11-19 00:12:57,259 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,263 - INFO - Rebalancing portfolio on 2015-12-31
+2024-11-19 00:12:57,264 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,268 - INFO - Rebalancing portfolio on 2016-01-29
+2024-11-19 00:12:57,269 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,276 - INFO - Rebalancing portfolio on 2016-02-29
+2024-11-19 00:12:57,277 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,278 - INFO - Rebalancing portfolio on 2016-03-31
+2024-11-19 00:12:57,278 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,278 - INFO - Rebalancing portfolio on 2016-04-29
+2024-11-19 00:12:57,278 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,296 - INFO - Rebalancing portfolio on 2016-05-31
+2024-11-19 00:12:57,297 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,302 - INFO - Rebalancing portfolio on 2016-06-30
+2024-11-19 00:12:57,302 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,311 - INFO - Rebalancing portfolio on 2016-07-29
+2024-11-19 00:12:57,311 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,316 - INFO - Rebalancing portfolio on 2016-08-31
+2024-11-19 00:12:57,317 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,322 - INFO - Rebalancing portfolio on 2016-09-30
+2024-11-19 00:12:57,323 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,329 - INFO - Rebalancing portfolio on 2016-10-31
+2024-11-19 00:12:57,330 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,335 - INFO - Rebalancing portfolio on 2016-11-30
+2024-11-19 00:12:57,336 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,342 - INFO - Rebalancing portfolio on 2016-12-30
+2024-11-19 00:12:57,343 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,346 - INFO - Rebalancing portfolio on 2017-01-31
+2024-11-19 00:12:57,346 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,346 - INFO - Rebalancing portfolio on 2017-02-28
+2024-11-19 00:12:57,346 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,361 - INFO - Rebalancing portfolio on 2017-03-31
+2024-11-19 00:12:57,362 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,367 - INFO - Rebalancing portfolio on 2017-04-28
+2024-11-19 00:12:57,368 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,376 - INFO - Rebalancing portfolio on 2017-05-31
+2024-11-19 00:12:57,376 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,381 - INFO - Rebalancing portfolio on 2017-06-30
+2024-11-19 00:12:57,382 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,386 - INFO - Rebalancing portfolio on 2017-07-31
+2024-11-19 00:12:57,387 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,393 - INFO - Rebalancing portfolio on 2017-08-31
+2024-11-19 00:12:57,393 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,393 - INFO - Rebalancing portfolio on 2017-09-29
+2024-11-19 00:12:57,393 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,408 - INFO - Rebalancing portfolio on 2017-10-31
+2024-11-19 00:12:57,409 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,416 - INFO - Rebalancing portfolio on 2017-11-30
+2024-11-19 00:12:57,416 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,419 - INFO - Rebalancing portfolio on 2017-12-29
+2024-11-19 00:12:57,419 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,426 - INFO - Rebalancing portfolio on 2018-01-31
+2024-11-19 00:12:57,427 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,432 - INFO - Rebalancing portfolio on 2018-02-28
+2024-11-19 00:12:57,433 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,434 - INFO - Rebalancing portfolio on 2018-04-30
+2024-11-19 00:12:57,442 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,448 - INFO - Rebalancing portfolio on 2018-05-31
+2024-11-19 00:12:57,449 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,451 - INFO - Rebalancing portfolio on 2018-06-29
+2024-11-19 00:12:57,451 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,459 - INFO - Rebalancing portfolio on 2018-07-31
+2024-11-19 00:12:57,459 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,465 - INFO - Rebalancing portfolio on 2018-08-31
+2024-11-19 00:12:57,466 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,468 - INFO - Rebalancing portfolio on 2018-09-28
+2024-11-19 00:12:57,468 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,475 - INFO - Rebalancing portfolio on 2018-10-31
+2024-11-19 00:12:57,477 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,477 - INFO - Rebalancing portfolio on 2018-11-30
+2024-11-19 00:12:57,477 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,486 - INFO - Rebalancing portfolio on 2018-12-31
+2024-11-19 00:12:57,486 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,488 - INFO - Rebalancing portfolio on 2019-01-31
+2024-11-19 00:12:57,488 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,497 - INFO - Rebalancing portfolio on 2019-02-28
+2024-11-19 00:12:57,497 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,502 - INFO - Rebalancing portfolio on 2019-03-29
+2024-11-19 00:12:57,503 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,504 - INFO - Rebalancing portfolio on 2019-04-30
+2024-11-19 00:12:57,510 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,515 - INFO - Rebalancing portfolio on 2019-05-31
+2024-11-19 00:12:57,516 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,521 - INFO - Rebalancing portfolio on 2019-06-28
+2024-11-19 00:12:57,521 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,526 - INFO - Rebalancing portfolio on 2019-07-31
+2024-11-19 00:12:57,528 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,533 - INFO - Rebalancing portfolio on 2019-08-30
+2024-11-19 00:12:57,533 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,538 - INFO - Rebalancing portfolio on 2019-09-30
+2024-11-19 00:12:57,538 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,543 - INFO - Rebalancing portfolio on 2019-10-31
+2024-11-19 00:12:57,543 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,549 - INFO - Rebalancing portfolio on 2019-11-29
+2024-11-19 00:12:57,550 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,552 - INFO - Rebalancing portfolio on 2019-12-31
+2024-11-19 00:12:57,552 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,559 - INFO - Rebalancing portfolio on 2020-01-31
+2024-11-19 00:12:57,559 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,565 - INFO - Rebalancing portfolio on 2020-02-28
+2024-11-19 00:12:57,566 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,568 - INFO - Rebalancing portfolio on 2020-03-31
+2024-11-19 00:12:57,568 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,576 - INFO - Rebalancing portfolio on 2020-04-30
+2024-11-19 00:12:57,576 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,582 - INFO - Rebalancing portfolio on 2020-05-29
+2024-11-19 00:12:57,583 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,587 - INFO - Rebalancing portfolio on 2020-06-30
+2024-11-19 00:12:57,588 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,593 - INFO - Rebalancing portfolio on 2020-07-31
+2024-11-19 00:12:57,593 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,599 - INFO - Rebalancing portfolio on 2020-08-31
+2024-11-19 00:12:57,600 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,601 - INFO - Rebalancing portfolio on 2020-09-30
+2024-11-19 00:12:57,601 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,609 - INFO - Rebalancing portfolio on 2020-10-30
+2024-11-19 00:12:57,612 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,616 - INFO - Rebalancing portfolio on 2020-11-30
+2024-11-19 00:12:57,616 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,621 - INFO - Rebalancing portfolio on 2020-12-31
+2024-11-19 00:12:57,622 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,629 - INFO - Rebalancing portfolio on 2021-01-29
+2024-11-19 00:12:57,630 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,634 - INFO - Rebalancing portfolio on 2021-02-26
+2024-11-19 00:12:57,635 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,636 - INFO - Rebalancing portfolio on 2021-03-31
+2024-11-19 00:12:57,636 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,646 - INFO - Rebalancing portfolio on 2021-04-30
+2024-11-19 00:12:57,646 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,653 - INFO - Rebalancing portfolio on 2021-06-30
+2024-11-19 00:12:57,653 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,662 - INFO - Rebalancing portfolio on 2021-07-30
+2024-11-19 00:12:57,662 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,667 - INFO - Rebalancing portfolio on 2021-08-31
+2024-11-19 00:12:57,667 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,672 - INFO - Rebalancing portfolio on 2021-09-30
+2024-11-19 00:12:57,672 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,676 - INFO - Rebalancing portfolio on 2021-10-29
+2024-11-19 00:12:57,676 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,682 - INFO - Rebalancing portfolio on 2021-11-30
+2024-11-19 00:12:57,683 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,684 - INFO - Rebalancing portfolio on 2021-12-31
+2024-11-19 00:12:57,684 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,693 - INFO - Rebalancing portfolio on 2022-01-31
+2024-11-19 00:12:57,696 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,699 - INFO - Rebalancing portfolio on 2022-02-28
+2024-11-19 00:12:57,700 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,700 - INFO - Rebalancing portfolio on 2022-03-31
+2024-11-19 00:12:57,700 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,709 - INFO - Rebalancing portfolio on 2022-04-29
+2024-11-19 00:12:57,709 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,717 - INFO - Rebalancing portfolio on 2022-05-31
+2024-11-19 00:12:57,717 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,721 - INFO - Rebalancing portfolio on 2022-06-30
+2024-11-19 00:12:57,722 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,728 - INFO - Rebalancing portfolio on 2022-07-29
+2024-11-19 00:12:57,729 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,733 - INFO - Rebalancing portfolio on 2022-08-31
+2024-11-19 00:12:57,733 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,739 - INFO - Rebalancing portfolio on 2022-09-30
+2024-11-19 00:12:57,739 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,747 - INFO - Rebalancing portfolio on 2022-10-31
+2024-11-19 00:12:57,747 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,751 - INFO - Rebalancing portfolio on 2022-11-30
+2024-11-19 00:12:57,751 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,756 - INFO - Rebalancing portfolio on 2022-12-30
+2024-11-19 00:12:57,757 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,763 - INFO - Rebalancing portfolio on 2023-01-31
+2024-11-19 00:12:57,764 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,768 - INFO - Rebalancing portfolio on 2023-02-28
+2024-11-19 00:12:57,769 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,774 - INFO - Rebalancing portfolio on 2023-03-31
+2024-11-19 00:12:57,776 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,782 - INFO - Rebalancing portfolio on 2023-04-28
+2024-11-19 00:12:57,783 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,783 - INFO - Rebalancing portfolio on 2023-05-31
+2024-11-19 00:12:57,783 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,793 - INFO - Rebalancing portfolio on 2023-06-30
+2024-11-19 00:12:57,793 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,800 - INFO - Rebalancing portfolio on 2023-07-31
+2024-11-19 00:12:57,801 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,801 - INFO - Rebalancing portfolio on 2023-08-31
+2024-11-19 00:12:57,801 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,812 - INFO - Rebalancing portfolio on 2023-09-29
+2024-11-19 00:12:57,812 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,818 - INFO - Rebalancing portfolio on 2023-10-31
+2024-11-19 00:12:57,819 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,824 - INFO - Rebalancing portfolio on 2023-11-30
+2024-11-19 00:12:57,824 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,832 - INFO - Rebalancing portfolio on 2023-12-29
+2024-11-19 00:12:57,832 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,834 - INFO - Rebalancing portfolio on 2024-01-31
+2024-11-19 00:12:57,834 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,844 - INFO - Rebalancing portfolio on 2024-02-29
+2024-11-19 00:12:57,846 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,851 - INFO - Rebalancing portfolio on 2024-04-30
+2024-11-19 00:12:57,851 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,862 - INFO - Rebalancing portfolio on 2024-05-31
+2024-11-19 00:12:57,862 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,867 - INFO - Rebalancing portfolio on 2024-06-28
+2024-11-19 00:12:57,868 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,872 - INFO - Rebalancing portfolio on 2024-07-31
+2024-11-19 00:12:57,874 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,876 - INFO - Rebalancing portfolio on 2024-08-30
+2024-11-19 00:12:57,876 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,886 - INFO - Rebalancing portfolio on 2024-09-30
+2024-11-19 00:12:57,887 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,892 - INFO - Rebalancing portfolio on 2024-10-31
+2024-11-19 00:12:57,892 - INFO - Transaction costs applied: nan
+2024-11-19 00:12:57,900 - INFO - Backtesting completed.
+2024-11-19 00:12:57,911 - INFO - Portfolio Value Over Time saved to 'portfolio_value_over_time.csv'.
+2024-11-19 00:12:57,911 - INFO - Performance Metrics:
+2024-11-19 00:12:57,912 - INFO - CAGR: nan%
+2024-11-19 00:12:57,912 - INFO - Sharpe Ratio: 0.00
+2024-11-19 00:12:57,912 - INFO - Maximum Drawdown: 0.00%
+2024-11-19 00:12:57,912 - INFO - Portfolio optimization process completed.
+2024-11-19 00:21:50,854 - INFO - Starting portfolio optimization process.
+2024-11-19 00:21:50,857 - INFO - Fetching historical data.
+2024-11-19 00:21:52,904 - INFO - Historical data fetched successfully.
+2024-11-19 00:21:52,904 - INFO - Preprocessing data.
+2024-11-19 00:21:52,975 - INFO - Data preprocessing completed.
+2024-11-19 00:21:52,975 - INFO - Training predictive models.
+2024-11-19 00:21:52,976 - INFO - Training model for AAPL.
+2024-11-19 00:22:35,528 - INFO - Asset: AAPL
+2024-11-19 00:22:35,528 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:22:35,528 - INFO - Average MAE: 0.007015
+2024-11-19 00:22:35,528 - INFO - Average RMSE: 0.010239
+2024-11-19 00:22:35,528 - INFO - Average R^2 Score: 0.676215
+
+2024-11-19 00:22:35,528 - INFO - Training model for MSFT.
+2024-11-19 00:23:13,929 - INFO - Asset: MSFT
+2024-11-19 00:23:13,929 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-19 00:23:13,929 - INFO - Average MAE: 0.006937
+2024-11-19 00:23:13,929 - INFO - Average RMSE: 0.010654
+2024-11-19 00:23:13,929 - INFO - Average R^2 Score: 0.614581
+
+2024-11-19 00:23:13,929 - INFO - Training model for GOOGL.
+2024-11-19 00:23:52,839 - INFO - Asset: GOOGL
+2024-11-19 00:23:52,839 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:23:52,839 - INFO - Average MAE: 0.007162
+2024-11-19 00:23:52,839 - INFO - Average RMSE: 0.010783
+2024-11-19 00:23:52,839 - INFO - Average R^2 Score: 0.636909
+
+2024-11-19 00:23:52,839 - INFO - Training model for AMZN.
+2024-11-19 00:24:31,889 - INFO - Asset: AMZN
+2024-11-19 00:24:31,889 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:24:31,889 - INFO - Average MAE: 0.007946
+2024-11-19 00:24:31,889 - INFO - Average RMSE: 0.012249
+2024-11-19 00:24:31,889 - INFO - Average R^2 Score: 0.649872
+
+2024-11-19 00:24:31,889 - INFO - Training model for META.
+2024-11-19 00:25:11,096 - INFO - Asset: META
+2024-11-19 00:25:11,096 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:25:11,096 - INFO - Average MAE: 0.009166
+2024-11-19 00:25:11,096 - INFO - Average RMSE: 0.014970
+2024-11-19 00:25:11,096 - INFO - Average R^2 Score: 0.601682
+
+2024-11-19 00:25:11,111 - INFO - Training model for JPM.
+2024-11-19 00:25:52,242 - INFO - Asset: JPM
+2024-11-19 00:25:52,242 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:25:52,242 - INFO - Average MAE: 0.006476
+2024-11-19 00:25:52,242 - INFO - Average RMSE: 0.010598
+2024-11-19 00:25:52,242 - INFO - Average R^2 Score: 0.623748
+
+2024-11-19 00:25:52,242 - INFO - Training model for XOM.
+2024-11-19 00:26:34,476 - INFO - Asset: XOM
+2024-11-19 00:26:34,476 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:26:34,476 - INFO - Average MAE: 0.007085
+2024-11-19 00:26:34,476 - INFO - Average RMSE: 0.010886
+2024-11-19 00:26:34,476 - INFO - Average R^2 Score: 0.616522
+
+2024-11-19 00:26:34,476 - INFO - Training model for JNJ.
+2024-11-19 00:27:14,271 - INFO - Asset: JNJ
+2024-11-19 00:27:14,282 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:27:14,282 - INFO - Average MAE: 0.004595
+2024-11-19 00:27:14,282 - INFO - Average RMSE: 0.007103
+2024-11-19 00:27:14,282 - INFO - Average R^2 Score: 0.610639
+
+2024-11-19 00:27:14,282 - INFO - Training model for VZ.
+2024-11-19 00:27:52,279 - INFO - Asset: VZ
+2024-11-19 00:27:52,279 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-19 00:27:52,279 - INFO - Average MAE: 0.005078
+2024-11-19 00:27:52,279 - INFO - Average RMSE: 0.007604
+2024-11-19 00:27:52,279 - INFO - Average R^2 Score: 0.612782
+
+2024-11-19 00:27:52,279 - INFO - Training model for PG.
+2024-11-19 00:28:33,055 - INFO - Asset: PG
+2024-11-19 00:28:33,055 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:28:33,055 - INFO - Average MAE: 0.004382
+2024-11-19 00:28:33,055 - INFO - Average RMSE: 0.006975
+2024-11-19 00:28:33,055 - INFO - Average R^2 Score: 0.643312
+
+2024-11-19 00:28:33,055 - INFO - Predictive modeling completed.
+2024-11-19 00:28:33,055 - INFO - Starting portfolio optimization.
+2024-11-19 00:28:33,073 - INFO - Optimized Weights: [0.11564975 0.11927699 0.10577804 0.13885902 0.12043619 0.10059589
+ 0.07355981 0.07502327 0.0713316  0.07948943]
+
+2024-11-19 00:28:33,073 - INFO - Starting backtesting.
+2024-11-19 00:31:41,077 - INFO - Starting portfolio optimization process.
+2024-11-19 00:31:41,077 - INFO - Fetching historical data.
+2024-11-19 00:31:43,226 - INFO - Historical data fetched successfully.
+2024-11-19 00:31:43,226 - INFO - Preprocessing data.
+2024-11-19 00:31:43,285 - INFO - Data preprocessing completed.
+2024-11-19 00:31:43,285 - INFO - Training predictive models.
+2024-11-19 00:31:43,285 - INFO - Training model for AAPL.
+2024-11-19 00:32:22,684 - INFO - Asset: AAPL
+2024-11-19 00:32:22,684 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:32:22,684 - INFO - Average MAE: 0.007393
+2024-11-19 00:32:22,684 - INFO - Average RMSE: 0.011070
+2024-11-19 00:32:22,684 - INFO - Average R^2 Score: 0.621584
+
+2024-11-19 00:32:22,684 - INFO - Training model for MSFT.
+2024-11-19 00:33:02,571 - INFO - Asset: MSFT
+2024-11-19 00:33:02,571 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-19 00:33:02,571 - INFO - Average MAE: 0.006933
+2024-11-19 00:33:02,571 - INFO - Average RMSE: 0.010649
+2024-11-19 00:33:02,571 - INFO - Average R^2 Score: 0.614945
+
+2024-11-19 00:33:02,571 - INFO - Training model for GOOGL.
+2024-11-19 00:33:40,259 - INFO - Asset: GOOGL
+2024-11-19 00:33:40,259 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:33:40,259 - INFO - Average MAE: 0.007174
+2024-11-19 00:33:40,259 - INFO - Average RMSE: 0.010790
+2024-11-19 00:33:40,259 - INFO - Average R^2 Score: 0.636466
+
+2024-11-19 00:33:40,259 - INFO - Training model for AMZN.
+2024-11-19 00:34:19,605 - INFO - Asset: AMZN
+2024-11-19 00:34:19,605 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:34:19,605 - INFO - Average MAE: 0.007947
+2024-11-19 00:34:19,605 - INFO - Average RMSE: 0.012252
+2024-11-19 00:34:19,610 - INFO - Average R^2 Score: 0.649703
+
+2024-11-19 00:34:19,610 - INFO - Training model for META.
+2024-11-19 00:34:58,338 - INFO - Asset: META
+2024-11-19 00:34:58,338 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:34:58,338 - INFO - Average MAE: 0.009172
+2024-11-19 00:34:58,338 - INFO - Average RMSE: 0.014972
+2024-11-19 00:34:58,338 - INFO - Average R^2 Score: 0.601554
+
+2024-11-19 00:34:58,338 - INFO - Training model for JPM.
+2024-11-19 00:35:39,641 - INFO - Asset: JPM
+2024-11-19 00:35:39,641 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 00:35:39,641 - INFO - Average MAE: 0.006480
+2024-11-19 00:35:39,641 - INFO - Average RMSE: 0.010605
+2024-11-19 00:35:39,641 - INFO - Average R^2 Score: 0.623240
+
+2024-11-19 00:35:39,641 - INFO - Training model for XOM.
+2024-11-19 00:36:21,918 - INFO - Asset: XOM
+2024-11-19 00:36:21,918 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:36:21,918 - INFO - Average MAE: 0.007086
+2024-11-19 00:36:21,934 - INFO - Average RMSE: 0.010888
+2024-11-19 00:36:21,934 - INFO - Average R^2 Score: 0.616413
+
+2024-11-19 00:36:21,934 - INFO - Training model for JNJ.
+2024-11-19 00:37:00,798 - INFO - Asset: JNJ
+2024-11-19 00:37:00,798 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:37:00,798 - INFO - Average MAE: 0.004595
+2024-11-19 00:37:00,798 - INFO - Average RMSE: 0.007104
+2024-11-19 00:37:00,798 - INFO - Average R^2 Score: 0.610610
+
+2024-11-19 00:37:00,798 - INFO - Training model for VZ.
+2024-11-19 00:37:37,255 - INFO - Asset: VZ
+2024-11-19 00:37:37,255 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-19 00:37:37,255 - INFO - Average MAE: 0.005072
+2024-11-19 00:37:37,255 - INFO - Average RMSE: 0.007598
+2024-11-19 00:37:37,255 - INFO - Average R^2 Score: 0.613344
+
+2024-11-19 00:37:37,255 - INFO - Training model for PG.
+2024-11-19 00:38:17,963 - INFO - Asset: PG
+2024-11-19 00:38:17,963 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 00:38:17,963 - INFO - Average MAE: 0.004587
+2024-11-19 00:38:17,963 - INFO - Average RMSE: 0.007256
+2024-11-19 00:38:17,976 - INFO - Average R^2 Score: 0.613925
+
+2024-11-19 00:38:17,976 - INFO - Predictive modeling completed.
+2024-11-19 00:38:17,976 - INFO - Starting portfolio optimization.
+2024-11-19 00:38:17,976 - INFO - Optimized Weights: [0.11729396 0.11906732 0.10520942 0.13843661 0.11999269 0.1003323
+ 0.07408568 0.07490979 0.07096497 0.07970726]
+
+2024-11-19 00:38:17,976 - INFO - Starting backtesting.
+2024-11-19 00:38:17,987 - INFO - Converted returns index to timezone-naive.
+2024-11-19 00:38:17,997 - INFO - Rebalancing portfolio on 2015-01-30
+2024-11-19 00:38:17,997 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:17,999 - INFO - Rebalancing portfolio on 2015-02-27
+2024-11-19 00:38:18,000 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,002 - INFO - Rebalancing portfolio on 2015-03-31
+2024-11-19 00:38:18,002 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,005 - INFO - Rebalancing portfolio on 2015-04-30
+2024-11-19 00:38:18,005 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,008 - INFO - Rebalancing portfolio on 2015-05-29
+2024-11-19 00:38:18,008 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,010 - INFO - Rebalancing portfolio on 2015-06-30
+2024-11-19 00:38:18,011 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,013 - INFO - Rebalancing portfolio on 2015-07-31
+2024-11-19 00:38:18,014 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,017 - INFO - Rebalancing portfolio on 2015-08-31
+2024-11-19 00:38:18,017 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,019 - INFO - Rebalancing portfolio on 2015-09-30
+2024-11-19 00:38:18,020 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,023 - INFO - Rebalancing portfolio on 2015-10-30
+2024-11-19 00:38:18,026 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,028 - INFO - Rebalancing portfolio on 2015-11-30
+2024-11-19 00:38:18,030 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,030 - INFO - Rebalancing portfolio on 2015-12-31
+2024-11-19 00:38:18,030 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,030 - INFO - Rebalancing portfolio on 2016-01-29
+2024-11-19 00:38:18,030 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,030 - INFO - Rebalancing portfolio on 2016-02-29
+2024-11-19 00:38:18,030 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,030 - INFO - Rebalancing portfolio on 2016-03-31
+2024-11-19 00:38:18,030 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,030 - INFO - Rebalancing portfolio on 2016-04-29
+2024-11-19 00:38:18,030 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,047 - INFO - Rebalancing portfolio on 2016-05-31
+2024-11-19 00:38:18,048 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,050 - INFO - Rebalancing portfolio on 2016-06-30
+2024-11-19 00:38:18,051 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,053 - INFO - Rebalancing portfolio on 2016-07-29
+2024-11-19 00:38:18,054 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,056 - INFO - Rebalancing portfolio on 2016-08-31
+2024-11-19 00:38:18,057 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,060 - INFO - Rebalancing portfolio on 2016-09-30
+2024-11-19 00:38:18,060 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,062 - INFO - Rebalancing portfolio on 2016-10-31
+2024-11-19 00:38:18,062 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,065 - INFO - Rebalancing portfolio on 2016-11-30
+2024-11-19 00:38:18,068 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,071 - INFO - Rebalancing portfolio on 2016-12-30
+2024-11-19 00:38:18,072 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,074 - INFO - Rebalancing portfolio on 2017-01-31
+2024-11-19 00:38:18,074 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,077 - INFO - Rebalancing portfolio on 2017-02-28
+2024-11-19 00:38:18,077 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,080 - INFO - Rebalancing portfolio on 2017-03-31
+2024-11-19 00:38:18,080 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,080 - INFO - Rebalancing portfolio on 2017-04-28
+2024-11-19 00:38:18,080 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,080 - INFO - Rebalancing portfolio on 2017-05-31
+2024-11-19 00:38:18,080 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,080 - INFO - Rebalancing portfolio on 2017-06-30
+2024-11-19 00:38:18,080 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,080 - INFO - Rebalancing portfolio on 2017-07-31
+2024-11-19 00:38:18,080 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,097 - INFO - Rebalancing portfolio on 2017-08-31
+2024-11-19 00:38:18,097 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,099 - INFO - Rebalancing portfolio on 2017-09-29
+2024-11-19 00:38:18,099 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,101 - INFO - Rebalancing portfolio on 2017-10-31
+2024-11-19 00:38:18,102 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,104 - INFO - Rebalancing portfolio on 2017-11-30
+2024-11-19 00:38:18,104 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,106 - INFO - Rebalancing portfolio on 2017-12-29
+2024-11-19 00:38:18,107 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,109 - INFO - Rebalancing portfolio on 2018-01-31
+2024-11-19 00:38:18,109 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,111 - INFO - Rebalancing portfolio on 2018-02-28
+2024-11-19 00:38:18,112 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,118 - INFO - Rebalancing portfolio on 2018-04-30
+2024-11-19 00:38:18,118 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,120 - INFO - Rebalancing portfolio on 2018-05-31
+2024-11-19 00:38:18,120 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,120 - INFO - Rebalancing portfolio on 2018-06-29
+2024-11-19 00:38:18,120 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,125 - INFO - Rebalancing portfolio on 2018-07-31
+2024-11-19 00:38:18,125 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,127 - INFO - Rebalancing portfolio on 2018-08-31
+2024-11-19 00:38:18,128 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,129 - INFO - Rebalancing portfolio on 2018-09-28
+2024-11-19 00:38:18,129 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,129 - INFO - Rebalancing portfolio on 2018-10-31
+2024-11-19 00:38:18,129 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,136 - INFO - Rebalancing portfolio on 2018-11-30
+2024-11-19 00:38:18,136 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,138 - INFO - Rebalancing portfolio on 2018-12-31
+2024-11-19 00:38:18,138 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,141 - INFO - Rebalancing portfolio on 2019-01-31
+2024-11-19 00:38:18,141 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,141 - INFO - Rebalancing portfolio on 2019-02-28
+2024-11-19 00:38:18,141 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,146 - INFO - Rebalancing portfolio on 2019-03-29
+2024-11-19 00:38:18,146 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,150 - INFO - Rebalancing portfolio on 2019-04-30
+2024-11-19 00:38:18,151 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,153 - INFO - Rebalancing portfolio on 2019-05-31
+2024-11-19 00:38:18,154 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,155 - INFO - Rebalancing portfolio on 2019-06-28
+2024-11-19 00:38:18,156 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,158 - INFO - Rebalancing portfolio on 2019-07-31
+2024-11-19 00:38:18,158 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,158 - INFO - Rebalancing portfolio on 2019-08-30
+2024-11-19 00:38:18,158 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,163 - INFO - Rebalancing portfolio on 2019-09-30
+2024-11-19 00:38:18,165 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,167 - INFO - Rebalancing portfolio on 2019-10-31
+2024-11-19 00:38:18,167 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,167 - INFO - Rebalancing portfolio on 2019-11-29
+2024-11-19 00:38:18,167 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,174 - INFO - Rebalancing portfolio on 2019-12-31
+2024-11-19 00:38:18,174 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,176 - INFO - Rebalancing portfolio on 2020-01-31
+2024-11-19 00:38:18,177 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,179 - INFO - Rebalancing portfolio on 2020-02-28
+2024-11-19 00:38:18,179 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,179 - INFO - Rebalancing portfolio on 2020-03-31
+2024-11-19 00:38:18,179 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,186 - INFO - Rebalancing portfolio on 2020-04-30
+2024-11-19 00:38:18,187 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,189 - INFO - Rebalancing portfolio on 2020-05-29
+2024-11-19 00:38:18,189 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,189 - INFO - Rebalancing portfolio on 2020-06-30
+2024-11-19 00:38:18,189 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,189 - INFO - Rebalancing portfolio on 2020-07-31
+2024-11-19 00:38:18,189 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,196 - INFO - Rebalancing portfolio on 2020-08-31
+2024-11-19 00:38:18,196 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,200 - INFO - Rebalancing portfolio on 2020-09-30
+2024-11-19 00:38:18,201 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,203 - INFO - Rebalancing portfolio on 2020-10-30
+2024-11-19 00:38:18,204 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,206 - INFO - Rebalancing portfolio on 2020-11-30
+2024-11-19 00:38:18,206 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,208 - INFO - Rebalancing portfolio on 2020-12-31
+2024-11-19 00:38:18,208 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,208 - INFO - Rebalancing portfolio on 2021-01-29
+2024-11-19 00:38:18,208 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,213 - INFO - Rebalancing portfolio on 2021-02-26
+2024-11-19 00:38:18,215 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,217 - INFO - Rebalancing portfolio on 2021-03-31
+2024-11-19 00:38:18,217 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,220 - INFO - Rebalancing portfolio on 2021-04-30
+2024-11-19 00:38:18,221 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,224 - INFO - Rebalancing portfolio on 2021-06-30
+2024-11-19 00:38:18,224 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,226 - INFO - Rebalancing portfolio on 2021-07-30
+2024-11-19 00:38:18,227 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,228 - INFO - Rebalancing portfolio on 2021-08-31
+2024-11-19 00:38:18,229 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,230 - INFO - Rebalancing portfolio on 2021-09-30
+2024-11-19 00:38:18,230 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,230 - INFO - Rebalancing portfolio on 2021-10-29
+2024-11-19 00:38:18,230 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,230 - INFO - Rebalancing portfolio on 2021-11-30
+2024-11-19 00:38:18,230 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,230 - INFO - Rebalancing portfolio on 2021-12-31
+2024-11-19 00:38:18,230 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,230 - INFO - Rebalancing portfolio on 2022-01-31
+2024-11-19 00:38:18,230 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,246 - INFO - Rebalancing portfolio on 2022-02-28
+2024-11-19 00:38:18,246 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,246 - INFO - Rebalancing portfolio on 2022-03-31
+2024-11-19 00:38:18,246 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,253 - INFO - Rebalancing portfolio on 2022-04-29
+2024-11-19 00:38:18,253 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,255 - INFO - Rebalancing portfolio on 2022-05-31
+2024-11-19 00:38:18,256 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,258 - INFO - Rebalancing portfolio on 2022-06-30
+2024-11-19 00:38:18,258 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,260 - INFO - Rebalancing portfolio on 2022-07-29
+2024-11-19 00:38:18,260 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,263 - INFO - Rebalancing portfolio on 2022-08-31
+2024-11-19 00:38:18,263 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,263 - INFO - Rebalancing portfolio on 2022-09-30
+2024-11-19 00:38:18,263 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,263 - INFO - Rebalancing portfolio on 2022-10-31
+2024-11-19 00:38:18,263 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,272 - INFO - Rebalancing portfolio on 2022-11-30
+2024-11-19 00:38:18,272 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,274 - INFO - Rebalancing portfolio on 2022-12-30
+2024-11-19 00:38:18,275 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,277 - INFO - Rebalancing portfolio on 2023-01-31
+2024-11-19 00:38:18,277 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,279 - INFO - Rebalancing portfolio on 2023-02-28
+2024-11-19 00:38:18,279 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,285 - INFO - Rebalancing portfolio on 2023-03-31
+2024-11-19 00:38:18,285 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,287 - INFO - Rebalancing portfolio on 2023-04-28
+2024-11-19 00:38:18,288 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,288 - INFO - Rebalancing portfolio on 2023-05-31
+2024-11-19 00:38:18,288 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,291 - INFO - Rebalancing portfolio on 2023-06-30
+2024-11-19 00:38:18,291 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,296 - INFO - Rebalancing portfolio on 2023-07-31
+2024-11-19 00:38:18,297 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,297 - INFO - Rebalancing portfolio on 2023-08-31
+2024-11-19 00:38:18,302 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,302 - INFO - Rebalancing portfolio on 2023-09-29
+2024-11-19 00:38:18,302 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,302 - INFO - Rebalancing portfolio on 2023-10-31
+2024-11-19 00:38:18,307 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,309 - INFO - Rebalancing portfolio on 2023-11-30
+2024-11-19 00:38:18,310 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,311 - INFO - Rebalancing portfolio on 2023-12-29
+2024-11-19 00:38:18,311 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,316 - INFO - Rebalancing portfolio on 2024-01-31
+2024-11-19 00:38:18,317 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,318 - INFO - Rebalancing portfolio on 2024-02-29
+2024-11-19 00:38:18,319 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,321 - INFO - Rebalancing portfolio on 2024-04-30
+2024-11-19 00:38:18,321 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,326 - INFO - Rebalancing portfolio on 2024-05-31
+2024-11-19 00:38:18,326 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,328 - INFO - Rebalancing portfolio on 2024-06-28
+2024-11-19 00:38:18,328 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,329 - INFO - Rebalancing portfolio on 2024-07-31
+2024-11-19 00:38:18,329 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,335 - INFO - Rebalancing portfolio on 2024-08-30
+2024-11-19 00:38:18,336 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,338 - INFO - Rebalancing portfolio on 2024-09-30
+2024-11-19 00:38:18,338 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,339 - INFO - Rebalancing portfolio on 2024-10-31
+2024-11-19 00:38:18,339 - INFO - Transaction costs applied: 0.00
+2024-11-19 00:38:18,353 - INFO - Portfolio Value Over Time saved to 'portfolio_value_over_time.csv'.
+2024-11-19 00:38:18,359 - INFO - Performance Metrics:
+2024-11-19 00:38:18,359 - INFO - CAGR: 20.10%
+2024-11-19 00:38:18,359 - INFO - Sharpe Ratio: 1.09
+2024-11-19 00:38:18,359 - INFO - Maximum Drawdown: -28.86%
+2024-11-19 00:38:18,361 - INFO - Backtesting completed.
+2024-11-19 00:38:18,370 - INFO - Portfolio Value Over Time saved to 'portfolio_value_over_time.csv'.
+2024-11-19 00:38:18,370 - INFO - Performance Metrics:
+2024-11-19 00:38:18,370 - INFO - CAGR: 2010.36%
+2024-11-19 00:38:18,371 - INFO - Sharpe Ratio: 1.09
+2024-11-19 00:38:18,371 - INFO - Maximum Drawdown: -2885.77%
+2024-11-19 00:38:18,371 - INFO - Portfolio optimization process completed.

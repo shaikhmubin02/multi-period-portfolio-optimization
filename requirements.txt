@@ -2,5 +2,7 @@ pandas
 numpy
 yfinance
 scikit-learn
+scipy
+PyYAML
 cvxpy
 matplotlib

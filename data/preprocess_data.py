@@ -2,6 +2,7 @@
 
 import pandas as pd
 import numpy as np
+import logging
 
 def preprocess_data(price_data):
     """
@@ -15,8 +16,20 @@ def preprocess_data(price_data):
             - returns (pd.DataFrame): Preprocessed data with returns
             - features (pd.DataFrame): Technical indicators and features
     """
+    logger = logging.getLogger('PortfolioOptimization')
+    
+    # Handle missing values
+    if price_data.isnull().values.any():
+        logger.warning("Missing values detected in price data. Applying forward fill.")
+        price_data = price_data.fillna(method='ffill').dropna()
+    
     # Calculate daily returns
     returns = price_data.pct_change().dropna()
+    
+    # Verify there are no infinite or NaN returns
+    if np.isinf(returns.values).any() or returns.isnull().values.any():
+        logger.error("Returns data contains invalid values after preprocessing.")
+        raise ValueError("Invalid values in returns data.")
     
     # Initialize features DataFrame
     features = pd.DataFrame(index=price_data.index)
@@ -35,8 +48,8 @@ def preprocess_data(price_data):
         features[f'{ticker}_MACD'] = macd
         features[f'{ticker}_MACD_Signal'] = signal
         
-        # ATR (Average True Range)
-        features[f'{ticker}_ATR_14'] = compute_atr(price_data[ticker], window=14)
+        # ATR (Average True Range) - modified to use only adjusted close prices
+        features[f'{ticker}_ATR_14'] = compute_atr_from_close(price_data[ticker], window=14)
     
     # Drop rows with NaN values resulted from rolling calculations
     features = features.dropna()
@@ -61,45 +74,40 @@ def compute_rsi(series, window):
     rs = gain / loss
     return 100 - (100 / (1 + rs))
 
-def compute_macd(series, fast=12, slow=26, signal=9):
+def compute_macd(series, span_short=12, span_long=26, span_signal=9):
     """
-    Computes the Moving Average Convergence Divergence (MACD) for a given series.
+    Computes the Moving Average Convergence Divergence (MACD) and Signal line.
     
     Args:
         series (pd.Series): Price series
-        fast (int): Fast EMA period
-        slow (int): Slow EMA period
-        signal (int): Signal line period
+        span_short (int): Short-term EMA span
+        span_long (int): Long-term EMA span
+        span_signal (int): Signal line EMA span
         
     Returns:
-        tuple: (MACD line, Signal line)
+        tuple: (macd, signal)
     """
-    fast_ema = series.ewm(span=fast, adjust=False).mean()
-    slow_ema = series.ewm(span=slow, adjust=False).mean()
-    macd_line = fast_ema - slow_ema
-    signal_line = macd_line.ewm(span=signal, adjust=False).mean()
-    return macd_line, signal_line
+    ema_short = series.ewm(span=span_short, adjust=False).mean()
+    ema_long = series.ewm(span=span_long, adjust=False).mean()
+    macd = ema_short - ema_long
+    signal = macd.ewm(span=span_signal, adjust=False).mean()
+    return macd, signal
 
-def compute_atr(series, window=14):
+def compute_atr_from_close(close_prices, window=14):
     """
-    Computes the Average True Range (ATR) for a given series.
+    Computes a simplified Average True Range (ATR) using only closing prices.
     
     Args:
-        series (pd.Series): Price series
+        close_prices (pd.Series): Series of closing prices
         window (int): Window size for ATR calculation
-        
+    
     Returns:
         pd.Series: ATR values
     """
-    high = series
-    low = series
-    close = series
+    # Calculate daily price ranges using close-to-close
+    ranges = close_prices.diff().abs()
     
-    tr1 = high - low
-    tr2 = (high - close.shift()).abs()
-    tr3 = (low - close.shift()).abs()
-    
-    tr = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
-    atr = tr.rolling(window=window).mean()
+    # Calculate ATR as the rolling mean of the ranges
+    atr = ranges.rolling(window=window).mean()
     
     return atr

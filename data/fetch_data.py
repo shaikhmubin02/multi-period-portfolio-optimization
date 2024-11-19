@@ -1,17 +1,26 @@
+# data/fetch_data.py
+
 import pandas as pd
 import yfinance as yf
+import logging
 
-def fetch_historical_data(tickers, start_date, end_date):
+def fetch_historical_data(assets, start_date, end_date):
     """
-    Fetches historical price data for the given tickers between start_date and end_date.
+    Fetches historical adjusted close price data for given assets.
     
     Args:
-        tickers (list): List of asset tickers.
+        assets (list): List of asset tickers.
         start_date (str): Start date in 'YYYY-MM-DD' format.
         end_date (str): End date in 'YYYY-MM-DD' format.
         
     Returns:
-        pd.DataFrame: Historical price data.
+        pd.DataFrame: DataFrame containing adjusted close prices.
     """
-    data = yf.download(tickers, start=start_date, end=end_date)
-    return data['Adj Close']
+    try:
+        data = yf.download(assets, start=start_date, end=end_date, auto_adjust=True)
+        price_data = data['Close']
+        price_data = price_data.dropna()
+        return price_data
+    except Exception as e:
+        logging.getLogger('PortfolioOptimization').error(f"Error fetching data: {e}")
+        raise
