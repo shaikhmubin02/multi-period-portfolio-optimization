@@ -138,85 +138,134 @@ def main():
     logger.info(f"Max Drawdown: {metrics['Max Drawdown']:.2f}%")
     logger.info(f"Calmar Ratio: {metrics['Calmar Ratio']:.2f}")
     
-    # Create Plots
-    create_plots(portfolio_value, metrics, logger)
+    # After backtesting and before plotting
+    logger.info(f"Portfolio Value Statistics:\n{portfolio_value.describe()}")
     
-    # Calculate and Plot Yearly Returns
-    calculate_and_plot_yearly_returns(portfolio_value, logger)
+    # Create Plots (Ensure this is called only once)
+    create_plots(portfolio_value, metrics, returns, weights, logger)
     
     logger.info("Portfolio optimization process completed.")
 
-def create_plots(portfolio_value, metrics, logger):
+def create_plots(portfolio_value, metrics, returns, weights, logger):
     """
     Creates and saves plots for portfolio performance metrics.
-
-    Args:
-        portfolio_value (pd.Series): Portfolio value over time.
-        metrics (dict): Dictionary containing performance metrics.
-        logger (logging.Logger): Logger instance for logging.
     """
     # Ensure the 'plots' directory exists
     plots_dir = 'plots'
     os.makedirs(plots_dir, exist_ok=True)
     
-    # Plot 1: Portfolio Value Over Time
-    plt.figure(figsize=(12, 6))
-    plt.plot(portfolio_value.index, portfolio_value.values, linewidth=2)
-    plt.title('Portfolio Value Over Time', fontsize=14, pad=15)
-    plt.xlabel('Date', fontsize=12)
-    plt.ylabel('Portfolio Value ($)', fontsize=12)
-    plt.grid(True, linestyle='--', alpha=0.7)
-    plt.xticks(rotation=45)
-    plt.tight_layout()
+    # --- Plot 1: Portfolio Value Over Time ---
+    plt.figure(figsize=(10, 6))
+    plt.plot(portfolio_value.index, portfolio_value.values, label='Portfolio Value')
+    plt.xlabel('Date')
+    plt.ylabel('Portfolio Value ($)')
+    plt.title('Portfolio Value Over Time')
+    plt.legend()
+    plt.grid(True)
     portfolio_plot_path = os.path.join(plots_dir, 'portfolio_value_over_time.png')
     plt.savefig(portfolio_plot_path)
     plt.close()
     logger.info(f"Portfolio Value Over Time plot saved to '{portfolio_plot_path}'.")
     
-    # Plot 2: Performance Metrics Bar Chart
+    # --- Plot 2: Performance Metrics Bar Chart ---
     metrics_keys = ['CAGR', 'Sharpe Ratio', 'Max Drawdown', 'Calmar Ratio']
     metrics_values = [metrics.get(key, np.nan) for key in metrics_keys]
     
-    plt.figure(figsize=(10, 6))
-    bars = plt.bar(metrics_keys, metrics_values, color=['#2ecc71', '#3498db', '#e74c3c', '#f1c40f'])
-    plt.title('Performance Metrics', fontsize=14, pad=15)
-    plt.ylabel('Value', fontsize=12)
+    plt.figure(figsize=(8, 6))
+    bars = plt.bar(metrics_keys, metrics_values, color=['blue', 'green', 'red', 'purple'])
+    plt.xlabel('Performance Metrics')
+    plt.ylabel('Values')
+    plt.title('Portfolio Performance Metrics')
     
-    # Modified value labels to handle Max Drawdown differently
-    for bar in bars:
+    # Annotate bars with their values
+    for bar, value, key in zip(bars, metrics_values, metrics_keys):
         height = bar.get_height()
-        if bar.get_x() + bar.get_width()/2. == 2:  # Max Drawdown bar
-            plt.text(bar.get_x() + bar.get_width()/2., height,
-                    f'-{abs(height):.2f}%',  # Always show as negative
-                    ha='center', va='bottom')
+        if np.isnan(value):
+            text = 'N/A'
         else:
-            plt.text(bar.get_x() + bar.get_width()/2., height,
-                    f'{height:.2f}%',
-                    ha='center', va='bottom')
+            if key in ['CAGR', 'Max Drawdown']:
+                text = f"{value:.2f}%"
+            else:
+                text = f"{value:.2f}"
+        plt.text(bar.get_x() + bar.get_width() / 2, height, text, ha='center', va='bottom')
     
-    plt.grid(True, axis='y', linestyle='--', alpha=0.7)
-    plt.tight_layout()
+    plt.ylim(0, max(metrics_values) * 1.2 if not all(np.isnan(metrics_values)) else 1)
+    plt.grid(axis='y')
     metrics_plot_path = os.path.join(plots_dir, 'performance_metrics.png')
     plt.savefig(metrics_plot_path)
     plt.close()
     logger.info(f"Performance Metrics plot saved to '{metrics_plot_path}'.")
     
-    # Additional Plot: Drawdown Over Time
+    # --- Plot 3: Portfolio Drawdown Over Time ---
     drawdown = (portfolio_value / portfolio_value.cummax()) - 1
-    plt.figure(figsize=(12, 6))
-    plt.plot(drawdown.index, drawdown.values * 100, linewidth=2, color='#e74c3c')
-    plt.title('Portfolio Drawdown Over Time', fontsize=14, pad=15)
-    plt.xlabel('Date', fontsize=12)
-    plt.ylabel('Drawdown (%)', fontsize=12)
-    plt.grid(True, linestyle='--', alpha=0.7)
-    plt.xticks(rotation=45)
-    plt.gca().yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{x:.0f}%'))
-    plt.fill_between(drawdown.index, drawdown.values * 100, 0, color='#e74c3c', alpha=0.3)
-    plt.tight_layout()
+    plt.figure(figsize=(10, 6))
+    plt.plot(drawdown.index, drawdown.values * 100, label='Drawdown', color='red')
+    plt.xlabel('Date')
+    plt.ylabel('Drawdown (%)')
+    plt.title('Portfolio Drawdown Over Time')
+    plt.legend()
+    plt.grid(True)
     drawdown_plot_path = os.path.join(plots_dir, 'portfolio_drawdown_over_time.png')
     plt.savefig(drawdown_plot_path)
     plt.close()
     logger.info(f"Portfolio Drawdown Over Time plot saved to '{drawdown_plot_path}'.")
+    
+    # --- Plot 4: Yearly Percentage Returns ---
+    # Calculate yearly returns correctly using 'YE' for year-end
+    yearly_returns = portfolio_value.resample('YE').last().pct_change() * 100
+    yearly_returns = yearly_returns.dropna()
+    
+    # Log yearly returns with proper formatting
+    logger.info("Yearly Percentage Returns:")
+    for year, value in yearly_returns.items():
+        logger.info(f"{year.year}: {value:.2f}%")
+    
+    plt.figure(figsize=(10, 6))
+    bars = plt.bar(yearly_returns.index.year, yearly_returns.values, color='skyblue')
+    
+    # Annotate bars with their values
+    for bar in bars:
+        height = bar.get_height()
+        plt.text(bar.get_x() + bar.get_width()/2., 
+                 height, 
+                 f'{height:.1f}%', 
+                 ha='center', 
+                 va='bottom' if height >= 0 else 'top')
+    
+    plt.xlabel('Year')
+    plt.ylabel('Annual Return (%)')
+    plt.title('Yearly Percentage Returns of Portfolio')
+    plt.grid(axis='y')
+    plt.xticks(yearly_returns.index.year, rotation=45)
+    
+    plt.tight_layout()
+    yearly_returns_plot_path = os.path.join(plots_dir, 'yearly_returns.png')
+    plt.savefig(yearly_returns_plot_path)
+    plt.close()
+    logger.info(f"Yearly Returns plot saved to '{yearly_returns_plot_path}'.")
+    
+    # --- Plot 5: Individual Companies' Annual Returns ---
+    weighted_returns = returns.mul(weights, axis=1)
+    annual_asset_returns = weighted_returns.resample('YE').sum() * 100  # 'YE' stands for year-end
+    
+    plt.figure(figsize=(12, 8))
+    years = annual_asset_returns.index.year
+    
+    for column in annual_asset_returns.columns:
+        plt.plot(years, annual_asset_returns[column], marker='o', label=column, linewidth=2)
+    
+    plt.xlabel('Year')
+    plt.ylabel('Annual Return Contribution (%)')
+    plt.title("Individual Companies' Annual Return Contribution to Portfolio")
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.grid(True)
+    plt.xticks(years, rotation=45)
+    
+    plt.tight_layout()
+    individual_returns_plot_path = os.path.join(plots_dir, 'individual_companies_annual_returns.png')
+    plt.savefig(individual_returns_plot_path, bbox_inches='tight')
+    plt.close()
+    logger.info(f"Individual Companies' Annual Returns plot saved to '{individual_returns_plot_path}'.")
 
 def calculate_and_plot_yearly_returns(portfolio_value, logger):
     """
@@ -304,28 +353,6 @@ def plot_drawdown(drawdown):
     plt.fill_between(drawdown.index, drawdown.values * 100, 0, color='#e74c3c', alpha=0.3)
     plt.tight_layout()
     plt.savefig('plots/portfolio_drawdown_over_time.png')
-    plt.close()
-
-def plot_yearly_returns(yearly_returns):
-    plt.figure(figsize=(12, 6))
-    colors = ['#2ecc71' if x > 0 else '#e74c3c' for x in yearly_returns.values]
-    bars = plt.bar(yearly_returns.index.astype(str), yearly_returns.values * 100, color=colors)
-    
-    plt.title('Yearly Returns', fontsize=14, pad=15)
-    plt.xlabel('Year', fontsize=12)
-    plt.ylabel('Return (%)', fontsize=12)
-    plt.grid(True, axis='y', linestyle='--', alpha=0.7)
-    plt.xticks(rotation=45)
-    
-    # Add value labels on top of each bar
-    for bar in bars:
-        height = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width()/2., height,
-                f'{height:.1f}%',
-                ha='center', va='bottom' if height > 0 else 'top')
-    
-    plt.tight_layout()
-    plt.savefig('plots/yearly_returns.png')
     plt.close()
 
 if __name__ == "__main__":
