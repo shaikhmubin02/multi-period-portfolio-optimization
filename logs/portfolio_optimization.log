@@ -893,3 +893,141 @@
 2024-11-19 00:38:18,371 - INFO - Sharpe Ratio: 1.09
 2024-11-19 00:38:18,371 - INFO - Maximum Drawdown: -2885.77%
 2024-11-19 00:38:18,371 - INFO - Portfolio optimization process completed.
+2024-11-19 22:30:49,807 - INFO - Logger has been set up successfully.
+2024-11-19 22:30:49,807 - INFO - Starting portfolio optimization process.
+2024-11-19 22:30:49,807 - INFO - Fetching historical data.
+2024-11-19 22:30:49,807 - ERROR - An unexpected error occurred: fetch_historical_data() missing 3 required positional arguments: 'assets', 'start_date', and 'end_date'
+2024-11-19 22:30:49,807 - ERROR - Traceback (most recent call last):
+  File "D:\multi-period-portfolio-optimization\main.py", line 31, in main
+    historical_data = fetch_historical_data()
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: fetch_historical_data() missing 3 required positional arguments: 'assets', 'start_date', and 'end_date'
+
+2024-11-19 22:50:39,099 - INFO - Logger has been set up successfully.
+2024-11-19 22:50:39,099 - INFO - Starting portfolio optimization process.
+2024-11-19 22:50:39,099 - INFO - Fetching historical data.
+2024-11-19 22:50:41,770 - INFO - Historical data fetched successfully.
+2024-11-19 22:50:41,770 - INFO - Preprocessing data.
+2024-11-19 22:50:41,826 - INFO - Data preprocessing completed.
+2024-11-19 22:50:41,826 - INFO - Training predictive models.
+2024-11-19 22:50:41,826 - INFO - Training model for AAPL.
+2024-11-19 22:51:26,178 - INFO - Asset: AAPL
+2024-11-19 22:51:26,178 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 100}
+2024-11-19 22:51:26,178 - INFO - Average MAE: 0.007176
+2024-11-19 22:51:26,178 - INFO - Average RMSE: 0.010661
+2024-11-19 22:51:26,178 - INFO - Average R^2 Score: 0.648669
+
+2024-11-19 22:51:26,178 - INFO - Training model for MSFT.
+2024-11-19 22:52:11,047 - INFO - Asset: MSFT
+2024-11-19 22:52:11,047 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 22:52:11,054 - INFO - Average MAE: 0.006879
+2024-11-19 22:52:11,054 - INFO - Average RMSE: 0.010400
+2024-11-19 22:52:11,054 - INFO - Average R^2 Score: 0.632469
+
+2024-11-19 22:52:11,054 - INFO - Training model for GOOGL.
+2024-11-19 22:52:53,364 - INFO - Asset: GOOGL
+2024-11-19 22:52:53,364 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 22:52:53,364 - INFO - Average MAE: 0.007232
+2024-11-19 22:52:53,364 - INFO - Average RMSE: 0.011037
+2024-11-19 22:52:53,364 - INFO - Average R^2 Score: 0.619233
+
+2024-11-19 22:52:53,364 - INFO - Training model for AMZN.
+2024-11-19 22:53:38,452 - INFO - Asset: AMZN
+2024-11-19 22:53:38,452 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 22:53:38,473 - INFO - Average MAE: 0.008273
+2024-11-19 22:53:38,473 - INFO - Average RMSE: 0.012657
+2024-11-19 22:53:38,473 - INFO - Average R^2 Score: 0.625557
+
+2024-11-19 22:53:38,473 - INFO - Training model for META.
+2024-11-19 22:54:22,220 - INFO - Asset: META
+2024-11-19 22:54:22,220 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 22:54:22,220 - INFO - Average MAE: 0.008854
+2024-11-19 22:54:22,220 - INFO - Average RMSE: 0.014848
+2024-11-19 22:54:22,220 - INFO - Average R^2 Score: 0.608106
+
+2024-11-19 22:54:22,220 - INFO - Training model for JPM.
+2024-11-19 22:55:07,729 - INFO - Asset: JPM
+2024-11-19 22:55:07,729 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 22:55:07,729 - INFO - Average MAE: 0.006995
+2024-11-19 22:55:07,729 - INFO - Average RMSE: 0.011155
+2024-11-19 22:55:07,729 - INFO - Average R^2 Score: 0.582682
+
+2024-11-19 22:55:07,729 - INFO - Training model for XOM.
+2024-11-19 22:55:53,290 - INFO - Asset: XOM
+2024-11-19 22:55:53,290 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 200}
+2024-11-19 22:55:53,290 - INFO - Average MAE: 0.006787
+2024-11-19 22:55:53,290 - INFO - Average RMSE: 0.010495
+2024-11-19 22:55:53,290 - INFO - Average R^2 Score: 0.643622
+
+2024-11-19 22:55:53,290 - INFO - Training model for JNJ.
+2024-11-19 22:56:37,201 - INFO - Asset: JNJ
+2024-11-19 22:56:37,217 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 22:56:37,218 - INFO - Average MAE: 0.004612
+2024-11-19 22:56:37,218 - INFO - Average RMSE: 0.007139
+2024-11-19 22:56:37,219 - INFO - Average R^2 Score: 0.606614
+
+2024-11-19 22:56:37,219 - INFO - Training model for VZ.
+2024-11-19 22:57:19,790 - INFO - Asset: VZ
+2024-11-19 22:57:19,805 - INFO - Best Parameters: {'max_depth': 20, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+2024-11-19 22:57:19,805 - INFO - Average MAE: 0.005028
+2024-11-19 22:57:19,805 - INFO - Average RMSE: 0.007521
+2024-11-19 22:57:19,805 - INFO - Average R^2 Score: 0.621169
+
+2024-11-19 22:57:19,805 - INFO - Training model for PG.
+2024-11-19 22:58:03,695 - INFO - Asset: PG
+2024-11-19 22:58:03,695 - INFO - Best Parameters: {'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100}
+2024-11-19 22:58:03,695 - INFO - Average MAE: 0.004200
+2024-11-19 22:58:03,695 - INFO - Average RMSE: 0.006506
+2024-11-19 22:58:03,695 - INFO - Average R^2 Score: 0.689530
+
+2024-11-19 22:58:03,695 - INFO - Predictive modeling completed.
+2024-11-19 22:58:03,695 - INFO - Starting portfolio optimization.
+2024-11-19 22:58:03,711 - INFO - Optimized Weights: [0.07996576 0.07998997 0.07980409 0.08026196 0.07997822 0.2
+ 0.15       0.1        0.1        0.05      ]
+
+2024-11-19 22:58:03,711 - INFO - Starting backtesting.
+2024-11-19 22:58:03,711 - INFO - Converted returns index to timezone-naive.
+2024-11-19 22:58:03,767 - WARNING - Returns data missing for rebalancing date: AAPL. Skipping rebalancing.
+2024-11-19 22:58:03,770 - WARNING - Returns data missing for rebalancing date: AMZN. Skipping rebalancing.
+2024-11-19 22:58:03,770 - WARNING - Returns data missing for rebalancing date: GOOGL. Skipping rebalancing.
+2024-11-19 22:58:03,770 - WARNING - Returns data missing for rebalancing date: JNJ. Skipping rebalancing.
+2024-11-19 22:58:03,770 - WARNING - Returns data missing for rebalancing date: JPM. Skipping rebalancing.
+2024-11-19 22:58:03,770 - WARNING - Returns data missing for rebalancing date: META. Skipping rebalancing.
+2024-11-19 22:58:03,770 - WARNING - Returns data missing for rebalancing date: MSFT. Skipping rebalancing.
+2024-11-19 22:58:03,770 - WARNING - Returns data missing for rebalancing date: PG. Skipping rebalancing.
+2024-11-19 22:58:03,770 - WARNING - Returns data missing for rebalancing date: VZ. Skipping rebalancing.
+2024-11-19 22:58:03,770 - WARNING - Returns data missing for rebalancing date: XOM. Skipping rebalancing.
+2024-11-19 22:58:03,777 - INFO - Backtesting completed.
+2024-11-19 22:58:03,793 - INFO - Portfolio Value Over Time saved to 'portfolio_value_over_time.csv'.
+2024-11-19 22:58:03,793 - INFO - Performance Metrics:
+2024-11-19 22:58:03,793 - INFO - CAGR: 0.00%
+2024-11-19 22:58:03,793 - INFO - Sharpe Ratio: 0.00
+2024-11-19 22:58:03,793 - INFO - Max Drawdown: 0.00%
+2024-11-19 22:58:03,793 - INFO - Calmar Ratio: nan
+2024-11-19 22:58:03,800 - INFO - Portfolio Value Statistics:
+count      2474.0
+mean     100000.0
+std           0.0
+min      100000.0
+25%      100000.0
+50%      100000.0
+75%      100000.0
+max      100000.0
+dtype: float64
+2024-11-19 22:58:04,162 - INFO - Portfolio Value Over Time plot saved to 'plots\portfolio_value_over_time.png'.
+2024-11-19 22:58:04,329 - WARNING - posx and posy should be finite values
+2024-11-19 22:58:04,374 - INFO - Performance Metrics plot saved to 'plots\performance_metrics.png'.
+2024-11-19 22:58:04,593 - INFO - Portfolio Drawdown Over Time plot saved to 'plots\portfolio_drawdown_over_time.png'.
+2024-11-19 22:58:04,602 - INFO - Yearly Percentage Returns:
+2024-11-19 22:58:04,602 - INFO - 2016: 0.00%
+2024-11-19 22:58:04,602 - INFO - 2017: 0.00%
+2024-11-19 22:58:04,602 - INFO - 2018: 0.00%
+2024-11-19 22:58:04,602 - INFO - 2019: 0.00%
+2024-11-19 22:58:04,602 - INFO - 2020: 0.00%
+2024-11-19 22:58:04,602 - INFO - 2021: 0.00%
+2024-11-19 22:58:04,602 - INFO - 2022: 0.00%
+2024-11-19 22:58:04,606 - INFO - 2023: 0.00%
+2024-11-19 22:58:04,606 - INFO - 2024: 0.00%
+2024-11-19 22:58:04,857 - INFO - Yearly Returns plot saved to 'plots\yearly_returns.png'.
+2024-11-19 22:58:05,282 - INFO - Individual Companies' Annual Returns plot saved to 'plots\individual_companies_annual_returns.png'.
+2024-11-19 22:58:05,282 - INFO - Portfolio optimization process completed.

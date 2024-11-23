@@ -1,33 +1,33 @@
-# Multi-Period Optimization Project
+# Multi-Period Portfolio Optimization
 
-## Overview
+A sophisticated portfolio optimization system that combines machine learning predictions with modern portfolio theory to create and maintain optimal investment portfolios.
 
-This project aims to create a portfolio that optimally balances risk and return over multiple periods. It includes data collection, predictive modeling, optimization, and backtesting components.
+## Features
 
-## Project Structure
+- **Data Collection**: Automated fetching of historical stock data using Yahoo Finance API
+- **Data Preprocessing**: Comprehensive technical indicator generation and data cleaning
+- **Machine Learning**: Random Forest-based return prediction with time-series cross-validation
+- **Portfolio Optimization**: Mean-variance optimization with sector constraints
+- **Backtesting**: Realistic backtesting with transaction costs and periodic rebalancing
+- **Performance Analysis**: Detailed performance metrics and visualizations
 
-- `data/`: Scripts for data fetching and preprocessing.
-- `models/`: Predictive models for asset returns.
-- `optimization/`: Optimization algorithms for portfolio weights.
-- `backtesting/`: Backtesting framework to evaluate strategy performance.
-- `main.py`: Main script to orchestrate the pipeline.
-- `requirements.txt`: Python dependencies.
-- `README.md`: Project documentation.
+## Key Performance Metrics
 
-## Setup
+- CAGR: ~20.57%
+- Sharpe Ratio: 1.05
+- Maximum Drawdown: -36.03%
+- Calmar Ratio: 0.57
 
-1. **Clone the Repository**
+## Installation
+
+1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/multi-period-optimization.git
-    cd multi-period-optimization
+    git clone https://github.com/shaikhmubin02/multi-period-portfolio-optimization.git
+    cd multi-period-portfolio-optimization
     ```
 
-2. **Install Dependencies**
+2. Create and activate a virtual environment:
     ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Run the Project**
-    ```bash
-    python main.py
+    python -m venv venv
+    source venv/bin/activate  # On Windows:
     ```

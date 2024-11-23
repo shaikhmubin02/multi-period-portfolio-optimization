@@ -59,38 +59,47 @@ def backtest_strategy(returns, weights, rebalance_frequency='BM', transaction_co
             try:
                 logger.info(f"Rebalancing portfolio on {date.date()}")
 
-                # Calculate portfolio value up to the previous date
+                # Calculate portfolio value before rebalancing
                 if date != prev_date:
                     portfolio_value = portfolio_values.loc[prev_date] * (1 + returns.loc[prev_date].dot(current_weights))
                 else:
                     portfolio_value = portfolio_values.loc[prev_date]
 
-                # Calculate new weights (assuming weights are predefined and not changing)
+                # Calculate new weights and actual portfolio composition
                 new_weights = weights.copy()
+                
+                # Get current portfolio composition after market movements
+                returns_since_last = returns.loc[prev_date] if date != prev_date else 0
+                current_values = current_weights * (1 + returns_since_last)
+                current_weights_drifted = current_values / current_values.sum()
 
-                # Calculate transaction costs
-                weight_diff = new_weights - current_weights
-                transaction_cost = np.sum(np.abs(weight_diff)) * portfolio_value * transaction_cost_rate
+                # Calculate actual weight differences for transaction costs
+                weight_diffs = np.abs(new_weights - current_weights_drifted)
+                transaction_cost = portfolio_value * np.sum(weight_diffs) * transaction_cost_rate
+
+                # Debug logging
+                logger.debug(f"Current weights (drifted): {current_weights_drifted}")
+                logger.debug(f"New weights: {new_weights}")
+                logger.debug(f"Weight differences: {weight_diffs}")
+                logger.debug(f"Portfolio value: ${portfolio_value:.2f}")
+                logger.debug(f"Raw transaction cost: ${transaction_cost:.2f}")
 
                 # Validate transaction_cost
                 if np.isnan(transaction_cost) or np.isinf(transaction_cost):
                     logger.error(f"Invalid transaction cost calculated: {transaction_cost}. Setting to 0.")
                     transaction_cost = 0.0
                 else:
-                    logger.info(f"Transaction costs applied: {transaction_cost:.2f}")
+                    logger.info(f"Transaction costs applied: ${transaction_cost:.2f}")
 
                 # Update portfolio value after transaction costs
                 portfolio_value -= transaction_cost
+                portfolio_values.loc[date] = portfolio_value
 
                 # Update weights
                 current_weights = new_weights.copy()
 
-                # Assign updated portfolio value
-                portfolio_values.loc[date] = portfolio_value
-
             except Exception as e:
                 logger.error(f"Error during rebalancing on {date.date()}: {e}")
-                # Carry forward the previous portfolio value
                 portfolio_values.loc[date] = portfolio_values.loc[prev_date]
 
         else:
